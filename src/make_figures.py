@@ -33,27 +33,29 @@ def paired_delay_contrast(d1, out, B=2000):
 
 
 def fig_framework(fig_dir):
-    fig, ax = plt.subplots(figsize=(7.2, 3.4)); ax.axis('off'); ax.set_xlim(0, 10); ax.set_ylim(0, 5)
-    def box(x, y, w, h, t, fc):
-        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0.05', fc=fc, ec='#333', lw=.8))
-        ax.text(x + w / 2, y + h / 2, t, ha='center', va='center', fontsize=8, wrap=True)
+    fig, ax = plt.subplots(figsize=(7.2, 4.0)); ax.axis('off'); ax.set_xlim(0, 12); ax.set_ylim(0, 7)
+    def box(x, y, w, h, t, fc, fs=7.3, bold=False):
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0.04', fc=fc, ec='#444', lw=.7))
+        ax.text(x + w / 2, y + h / 2, t, ha='center', va='center', fontsize=fs, weight='bold' if bold else 'normal', linespacing=1.25)
     def arr(x1, y1, x2, y2):
-        ax.annotate('', (x2, y2), (x1, y1), arrowprops=dict(arrowstyle='->', lw=.9, color='#333'))
-    ax.text(.1, 4.7, 'Studies 1 and 3 — real production data in timestamp order (SECOM; Siemens AOI)', fontsize=9, weight='bold')
-    box(.1, 3.4, 2.2, 1.0, 'Labels released\nafter delay L days', '#E8F0FA')
-    box(2.8, 3.4, 2.2, 1.0, 'Weekly refit on\nreleased labels only', '#E8F0FA')
-    box(5.5, 3.4, 2.0, 1.0, 'Flag high-risk units /\nrelease low-risk alarms', '#E8F0FA')
-    box(8.0, 3.4, 1.9, 1.0, 'Recall or slip vs\nrandom-split estimate', '#E8F0FA')
-    for a, b in ((2.3, 2.8), (5.0, 5.5), (7.5, 8.0)): arr(a, 3.9, b, 3.9)
-    ax.text(.1, 2.5, 'Study 2 — controlled simulation (common random numbers)', fontsize=9, weight='bold')
-    box(.1, 1.2, 2.2, 1.0, 'Batch results released\nafter delay L periods', '#EAF5EC')
-    box(2.8, 1.2, 2.2, 1.0, 'Pilot → deploy →\nmonitor → roll back', '#EAF5EC')
-    box(5.5, 1.2, 2.0, 1.0, 'Heuristics vs\nacceptance plan +\nCUSUM / EWMA', '#EAF5EC')
-    box(8.0, 1.2, 1.9, 1.0, 'Value, defects,\nout-of-spec periods', '#EAF5EC')
-    for a, b in ((2.3, 2.8), (5.0, 5.5), (7.5, 8.0)): arr(a, 1.7, b, 1.7)
-    ax.text(5, .35, 'Shared question: how much does evaluating with information unavailable at decision time\n'
-            '(random splits, immediate labels) overstate value, and does it change which option is chosen?', ha='center', fontsize=8, style='italic')
-    fig.tight_layout(); fig.savefig(fig_dir / 'fig1_study_design.png', dpi=300); plt.close(fig)
+        ax.annotate('', (x2, y2), (x1, y1), arrowprops=dict(arrowstyle='->', lw=.8, color='#444'))
+    for x, t in ((.1, 'Data'), (4.2, 'Evaluation designs'), (8.3, 'Decision tools and outputs')):
+        ax.text(x, 6.7, t, fontsize=8.5, weight='bold')
+    box(.1, 4.9, 3.4, 1.4, 'Study 1: SECOM\nsemiconductor line\n1,567 units, 104 failures', '#E8F0FA')
+    box(.1, 3.0, 3.4, 1.4, 'Study 3: Siemens AOI\nelectronics line\n440,274 alarms', '#E8F0FA')
+    box(.1, 1.1, 3.4, 1.4, 'Study 2: simulation\nheuristics vs acceptance\nsampling + CUSUM / EWMA', '#EAF5EC')
+    box(4.2, 5.25, 3.5, 1.05, 'Time-ordered replay vs random\nsplit; label delays 0–14 days', '#F4F4F4')
+    box(4.2, 4.0, 3.5, 1.05, 'Size-matched C / M / W designs;\nbatch and causal decisions', '#F4F4F4')
+    box(4.2, 2.75, 3.5, 1.05, 'Model-ageing curves', '#F4F4F4')
+    box(4.2, 1.1, 3.5, 1.3, 'Report-delay sweeps with common\nrandom numbers; cost grid;\nexposure constraints', '#F4F4F4')
+    box(8.3, 4.95, 3.6, 1.35, 'Online release threshold with\ndelayed or audited feedback\n(Propositions 1 and 3)', '#FFF3E0')
+    box(8.3, 1.1, 3.6, 1.35, 'Latency requirement and\ncertified maximum delay\n(Proposition 2, Corollary 2)', '#FFF3E0')
+    box(8.3, 2.85, 3.6, 1.8, 'Reporting protocol (Table 8):\nvalue with exposure, decision\ntiming, ageing, matched\ncomparators, reproducibility', '#FFF3E0')
+    for y in (5.6, 3.7): arr(3.5, y, 4.2, y + .1)
+    arr(3.5, 1.8, 4.2, 1.75); arr(7.7, 5.0, 8.3, 5.4); arr(7.7, 3.27, 8.3, 3.6); arr(7.7, 1.75, 8.3, 1.75)
+    ax.text(6.0, .45, 'Shared question: how much does evaluating with information unavailable at decision time overstate value,\n'
+            'which mechanism drives it, and does it change the decision?', ha='center', fontsize=7.4, style='italic')
+    fig.tight_layout(); fig.savefig(fig_dir / 'fig1_study_design.png', dpi=300); fig.savefig(fig_dir / 'fig1_study_design.pdf'); plt.close(fig)
 
 
 def fig_study1(d1, fig_dir):
@@ -71,7 +73,7 @@ def fig_study1(d1, fig_dir):
     ax.set_xticks(range(5)); ax.set_xticklabels([f'L={d} d' for d in meta['delays_days']])
     ax.set_ylabel('Share of failures caught\n(top 10% inspected)'); ax.set_xlabel('Label delay in deployment replay')
     ax.set_ylim(0, .45); ax.legend(fontsize=7, frameon=False, loc='upper right', ncol=1)
-    fig.tight_layout(); fig.savefig(fig_dir / 'fig2_secom_recall_vs_delay.png', dpi=300); plt.close(fig)
+    fig.tight_layout(); fig.savefig(fig_dir / 'fig2_secom_recall_vs_delay.png', dpi=300); fig.savefig(fig_dir / 'fig2_secom_recall_vs_delay.pdf'); plt.close(fig)
 
 
 def fig_study2_value(d2, fig_dir):
@@ -84,7 +86,7 @@ def fig_study2_value(d2, fig_dir):
             ax.plot(g.delay, g[col], 'o-', color=C[p], ms=3, lw=1.1, label=p)
         ax.set_title(ttl, fontsize=8.5); ax.set_xlabel('Report delay L (periods)'); ax.set_xticks(range(5))
     axes[0].set_ylabel('Mean per trajectory'); axes[0].legend(fontsize=7, frameon=False)
-    fig.tight_layout(); fig.savefig(fig_dir / 'fig5_sim_value_vs_delay.png', dpi=300); plt.close(fig)
+    fig.tight_layout(); fig.savefig(fig_dir / 'fig5_sim_value_vs_delay.png', dpi=300); fig.savefig(fig_dir / 'fig5_sim_value_vs_delay.pdf'); plt.close(fig)
 
 
 def fig_study2_decomp(d2, fig_dir):
@@ -108,7 +110,7 @@ def fig_study2_decomp(d2, fig_dir):
     ax.set_xticks(x); ax.set_xticklabels([f'{lab[a]}\n{b}' for a, b in order], fontsize=8)
     ax.set_ylabel('V(L=0) − V(L=3), normalized units'); ax.legend(fontsize=7, frameon=False, loc='upper left', ncol=2)
     ax.set_ylim(min(neg.min(), 0) - 2, pos.max() * 1.35)
-    fig.tight_layout(); fig.savefig(fig_dir / 'fig6_bias_decomposition.png', dpi=300); plt.close(fig)
+    fig.tight_layout(); fig.savefig(fig_dir / 'fig6_bias_decomposition.png', dpi=300); fig.savefig(fig_dir / 'fig6_bias_decomposition.pdf'); plt.close(fig)
 
 
 def fig_study3(d3, fig_dir):
@@ -126,7 +128,7 @@ def fig_study3(d3, fig_dir):
     ax.set_xticks(x); ax.set_xticklabels([f'W{i+1}' for i in x]); ax.set_xlabel('Deployment week')
     ax.set_ylabel('Slip: true defects released (%)'); ax.set_ylim(bottom=0); ax2.set_ylim(bottom=0); ax.legend(fontsize=7, frameon=False, loc='upper left')
     ax.spines['right'].set_visible(True)
-    fig.tight_layout(); fig.savefig(fig_dir / 'fig3_aoi_weekly_slip.png', dpi=300); plt.close(fig)
+    fig.tight_layout(); fig.savefig(fig_dir / 'fig3_aoi_weekly_slip.png', dpi=300); fig.savefig(fig_dir / 'fig3_aoi_weekly_slip.pdf'); plt.close(fig)
 
 
 def fig_ageing(res, fig_dir):
@@ -147,7 +149,7 @@ def fig_ageing(res, fig_dir):
     ax.set_title('AOI: slip when 40% of alarms are released (%)', fontsize=8.5); ax.set_xlabel('Model age (days)')
     ax.legend(fontsize=7, frameon=False, loc='lower right')
     for a in axes: a.set_xticks([3.5, 10.5, 17.5, 24.5, 35]); a.set_xticklabels(['0–7', '7–14', '14–21', '21–28', '28–42'])
-    fig.tight_layout(); fig.savefig(fig_dir / 'fig4_model_ageing.png', dpi=300); plt.close(fig)
+    fig.tight_layout(); fig.savefig(fig_dir / 'fig4_model_ageing.png', dpi=300); fig.savefig(fig_dir / 'fig4_model_ageing.pdf'); plt.close(fig)
 
 
 def main():

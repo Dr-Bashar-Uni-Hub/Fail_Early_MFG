@@ -1,0 +1,15 @@
+{
+  "dataset_sha256": "eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e",
+  "rows": 1567,
+  "features": 590,
+  "failures": 104,
+  "folds": [
+    "random_test",
+    "chronological_test",
+    "expanding_1",
+    "expanding_2",
+    "expanding_3",
+    "expanding_4"
+  ],
+  "note": "Models refit on each training window; this is not the identical hyperparameter protocol used in every earlier phase."
+}

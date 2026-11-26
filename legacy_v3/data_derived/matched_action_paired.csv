@@ -1,0 +1,5 @@
+theta,comparison,n,mean_diff
+0.035,exact minus greedy,200,10.9
+0.035,exact minus fixed,200,6.62
+0.24,exact minus greedy,200,0.52
+0.24,exact minus fixed,200,2.44

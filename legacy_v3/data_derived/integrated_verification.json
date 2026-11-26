@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "secom_refit": true,
+  "secom_models_folds": 18,
+  "full_matched_trajectories": 3000,
+  "reduced_oracle_checks": 5,
+  "secom_sha256": "eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e",
+  "scope": "Full simulator uses matched available actions with differing heuristics; exact oracle applies ONLY to reduced benchmark."
+}

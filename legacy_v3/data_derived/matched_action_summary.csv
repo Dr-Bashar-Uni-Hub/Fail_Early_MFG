@@ -1,0 +1,7 @@
+theta,policy,n,mean_net,mean_production,deploy_rate,rollback_rate
+0.035,exact,200,10.9,9,1,0
+0.035,greedy,200,0.0,0,0,0
+0.035,fixed,200,4.28,5.13,0.905,0.1
+0.24,exact,200,0.52,9,1,0
+0.24,greedy,200,0.0,0,0,0
+0.24,fixed,200,-1.92,1.83,0.415,0.22

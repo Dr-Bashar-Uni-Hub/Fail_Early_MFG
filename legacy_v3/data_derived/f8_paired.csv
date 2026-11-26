@@ -1,0 +1,26 @@
+scenario,comparison,n,mean_difference,ci95_low,ci95_high
+nominal,queue_guard minus matched_fixed,200,-0.38375,-1.2451465664028112,0.47764656640281117
+nominal,queue_guard minus matched_reactive,200,0.1925,-0.18479999999999996,0.5698
+nominal,queue_guard minus no_queue,200,0.0,0.0,0.0
+nominal,queue_guard minus no_rollback,200,0.0,0.0,0.0
+nominal,queue_guard minus no_risk_gate,200,-1.29375,-1.7581560638581726,-0.8293439361418273
+late_shift,queue_guard minus matched_fixed,200,-5.1325,-6.229207433879993,-4.035792566120008
+late_shift,queue_guard minus matched_reactive,200,-0.05125,-0.1517,0.0492
+late_shift,queue_guard minus no_queue,200,0.0,0.0,0.0
+late_shift,queue_guard minus no_rollback,200,-3.9,-4.910835487064808,-2.889164512935192
+late_shift,queue_guard minus no_risk_gate,200,-5.185,-6.293967796678674,-4.076032203321326
+high_defect,queue_guard minus matched_fixed,200,-1.49375,-1.7008380233974754,-1.2866619766025245
+high_defect,queue_guard minus matched_reactive,200,-0.495,-0.5019122133551661,-0.4880877866448339
+high_defect,queue_guard minus no_queue,200,0.0,0.0,0.0
+high_defect,queue_guard minus no_rollback,200,-0.04625,-0.11039991383255021,0.017899913832550213
+high_defect,queue_guard minus no_risk_gate,200,-1.21375,-2.6182690049135386,0.19076900491353843
+delayed_reports,queue_guard minus matched_fixed,200,-0.5275,-1.244197018994202,0.18919701899420216
+delayed_reports,queue_guard minus matched_reactive,200,5.99375,3.955290818076225,8.032209181923776
+delayed_reports,queue_guard minus no_queue,200,-14.69,-14.95047308370863,-14.429526916291369
+delayed_reports,queue_guard minus no_rollback,200,0.0,0.0,0.0
+delayed_reports,queue_guard minus no_risk_gate,200,-1.24125,-1.7036896219043467,-0.7788103780956532
+rollback_expensive,queue_guard minus matched_fixed,200,-17.0125,-18.132351344563016,-15.892648655436982
+rollback_expensive,queue_guard minus matched_reactive,200,-0.11125,-0.3293,0.10679999999999999
+rollback_expensive,queue_guard minus no_queue,200,0.0,0.0,0.0
+rollback_expensive,queue_guard minus no_rollback,200,-15.78,-16.813139846541873,-14.746860153458128
+rollback_expensive,queue_guard minus no_risk_gate,200,-17.065,-18.196968484299468,-15.933031515700533

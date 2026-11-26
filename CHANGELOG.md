@@ -1,6 +1,14 @@
 # Changelog
 
-## 6.2.0 (2026-11-25) — submission version (no new research)
+## 6.2.1 (2026-11-26) — special-issue submission version (no new research)
+* Manuscript prepared for the Quality Engineering Special Issue on Data Quality: Introduction reframed around
+  decision-time data availability and dark data (Hand 2020); Figure 1 moved into the Introduction.
+* Box 1 renamed Table 8 (also in Figure 1).
+* Declarations completed (no competing interests, no funding, AI use, author contributions); repository URL added.
+* Reference list replaced with the author-verified list (DOIs added); in-text years aligned (DeGroot 2004, Montgomery 2020,
+  Schilling and Neubauer 2009, Gama, Sebastião and Rodrigues 2009); all 47 references cross-checked against the text.
+
+## 6.2.0 (2026-11-25)
 * Proposition 3 clarified: pending audit outcomes at the horizon; assumption relaxed to predictable scores.
 * Qualifications: Clopper-Pearson stepwise rule valid only under exchangeability; certification guarantee vs empirical
   coverage (EWMA); C/M/W calibration differences; SECOM delay effects stated with their uncertainty (Results, Discussion,

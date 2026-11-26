@@ -1,0 +1,11 @@
+scenario,comparison,n,mean_difference,bootstrap_95_low,bootstrap_95_high
+delayed_reports,queue_guard minus matched_fixed,200,-0.5275,-1.19625,0.2425
+delayed_reports,queue_guard minus matched_reactive,200,5.99375,3.9725,8.11
+high_defect,queue_guard minus matched_fixed,200,-1.49375,-1.68,-1.28125
+high_defect,queue_guard minus matched_reactive,200,-0.495,-0.5,-0.4875
+late_shift,queue_guard minus matched_fixed,200,-5.1325,-6.15625,-3.9875
+late_shift,queue_guard minus matched_reactive,200,-0.05125,-0.15375,0.0
+nominal,queue_guard minus matched_fixed,200,-0.38375,-1.165,0.57
+nominal,queue_guard minus matched_reactive,200,0.1925,0.0,0.5775
+rollback_expensive,queue_guard minus matched_fixed,200,-17.0125,-18.12375,-15.83875
+rollback_expensive,queue_guard minus matched_reactive,200,-0.11125,-0.33375,0.0

@@ -5,8 +5,9 @@ authors:
   - family-names: "ALHAJAHMAD"
     given-names: "Bashar"
     affiliation: "Department of Computer Engineering, Siirt University, Türkiye"
-    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # add before release
-version: "6.2.0"
-date-released: "2026-11-25"
+    orcid: "https://orcid.org/0009-0009-3455-7206"
+    email: "bashar.ahmad@siirt.edu.tr"
+version: "6.2.1"
+date-released: "2026-11-26"
 license: MIT
 # doi: "10.5281/zenodo.XXXXXXX"   # add after archiving the GitHub release on Zenodo
