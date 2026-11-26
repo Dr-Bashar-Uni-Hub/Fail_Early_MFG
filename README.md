@@ -1,8 +1,8 @@
-# Decision-time information in manufacturing quality evaluation
+# Decision-time data quality in manufacturing
 
-Reproducibility package for the manuscript *“Decision-time information in manufacturing quality evaluation:
-deployment replays on two production datasets and a simulation with SPC comparators”*
-(submitted to *Quality Engineering*).
+Reproducibility package for the manuscript *“Decision-time data quality in manufacturing: quantifying evaluation bias
+with deployment replays and statistical process control”* (submitted to the *Quality Engineering* Special Issue on
+Data Quality).
 
 ## Quick start
 

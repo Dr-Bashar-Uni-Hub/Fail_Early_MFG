@@ -1,6 +1,12 @@
 # Changelog
 
-## 6.2.1 (2026-11-26) — special-issue submission version (no new research)
+## 6.3.0 (2026-11-26) — special-issue submission version (no new research)
+* Retitled: “Decision-time data quality in manufacturing: quantifying evaluation bias with deployment replays and
+  statistical process control”. Abstract and keywords framed as a data-quality problem (240 words).
+* Introduction: positioning paragraph citing Redman and Hoerl (2023), Pham, Hoerl and Redman (2026) and Wang and Strong (1996).
+* Table 8: data-quality dimension column (timeliness, completeness, fitness for purpose, traceability).
+
+## 6.2.1 (2026-11-26)
 * Manuscript prepared for the Quality Engineering Special Issue on Data Quality: Introduction reframed around
   decision-time data availability and dark data (Hand 2020); Figure 1 moved into the Introduction.
 * Box 1 renamed Table 8 (also in Figure 1).
