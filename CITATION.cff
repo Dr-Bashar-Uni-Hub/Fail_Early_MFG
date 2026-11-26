@@ -6,7 +6,7 @@ authors:
     given-names: "Bashar"
     affiliation: "Department of Computer Engineering, Siirt University, Türkiye"
     # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # add before release
-version: "6.1.0"
+version: "6.2.0"
 date-released: "2026-11-25"
 license: MIT
 # doi: "10.5281/zenodo.XXXXXXX"   # add after archiving the GitHub release on Zenodo
