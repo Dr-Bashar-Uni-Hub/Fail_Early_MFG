@@ -1,6 +1,18 @@
 # Changelog
 
-## 6.1.0 (2026-11-25) — submission version
+## 6.2.0 (2026-11-25) — submission version (no new research)
+* Proposition 3 clarified: pending audit outcomes at the horizon; assumption relaxed to predictable scores.
+* Qualifications: Clopper-Pearson stepwise rule valid only under exchangeability; certification guarantee vs empirical
+  coverage (EWMA); C/M/W calibration differences; SECOM delay effects stated with their uncertainty (Results, Discussion,
+  Conclusions); abstract audit claim (slip above the 1% target). Outdated Section 6.4 seed statement corrected.
+* Initial label availability stated explicitly.
+* Figure 1 redrawn; all figures also exported as vector PDF.
+* Audited-release and certification methods moved to Supplementary Appendix S2.
+* Draft AI-use statement (highlighted for author confirmation).
+* Verification: 15 unit tests pass; quick end-to-end run (`run_pipeline.py --quick`, SECOM + simulation) completed
+  without errors on 2026-11-25; AOI steps not re-run for this version (code unchanged). See docs/V6.2_QE71-75_final_report.md.
+
+## 6.1.0 (2026-11-25)
 * Fixed: SECOM initial-history count reported as 627 (rounding); the analysis used 626 (626 + 941 = 1,567). Unit test added.
 * Proposition 1 audited (variable/out-of-order/burst delays; tightened constant); Proposition 2 assumptions corrected
   (same monitoring state at the shift), empty/unbounded feasible sets handled.

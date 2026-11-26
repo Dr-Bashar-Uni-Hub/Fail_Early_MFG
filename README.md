@@ -33,6 +33,7 @@ python -m pytest tests                        # unit + consistency tests
 | Chart operating characteristics | `src/chart_arl.py` | `study2_chart_arl.csv` | Supplementary Table S2 |
 | Figures and paired contrasts | `src/make_figures.py` | `figures/*.png`, `study1_paired_delay_contrast.csv` | Figures 1–6 |
 | Sensitivity analyses (Section 5.5) | `src/sensitivity.py` | `sensitivity/sensitivity_simulation.csv`, `sensitivity/sensitivity_secom.csv`, `sensitivity/sens_chart_calibration.json` | Section 5.7, Supplementary Tables S4–S5 |
+| Figures (PNG 300 dpi and vector PDF) | `src/make_figures.py` | `figures/*.png`, `figures/*.pdf` | Figures 1–6, S1 |
 | Every number quoted in the text | `src/make_tables.py` | `manuscript_numbers.json` | all |
 
 `results/run_record.json` stores the seeds, bootstrap sizes, Python version and SHA-256 hashes of the
@@ -50,6 +51,7 @@ node manuscript/build_manuscript.js . manuscript/manuscript.docx   # also writes
 
 `docs/V6_mathematical_screening_report.md` records the novelty screening of seven candidate mathematical directions, the
 closest prior art, the two propositions retained (with proofs) and the directions rejected.
+`docs/V6.2_QE71-75_final_report.md` records the final verification and the remaining open items.
 `docs/V6.1_QE61-70_gate_report.md` records the independent audit of the propositions, corrections, new results,
 negative results and tasks not done.
 
