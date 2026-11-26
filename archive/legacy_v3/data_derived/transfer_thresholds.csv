@@ -1,0 +1,19 @@
+delta,observed_failures,minimum_total_pilot_observations,rule
+0,0,10,posterior Pr(p > 0.12-delta) <= 0.10
+0,1,22,posterior Pr(p > 0.12-delta) <= 0.10
+0,2,34,posterior Pr(p > 0.12-delta) <= 0.10
+0.01,0,11,posterior Pr(p > 0.12-delta) <= 0.10
+0.01,1,25,posterior Pr(p > 0.12-delta) <= 0.10
+0.01,2,38,posterior Pr(p > 0.12-delta) <= 0.10
+0.02,0,13,posterior Pr(p > 0.12-delta) <= 0.10
+0.02,1,29,posterior Pr(p > 0.12-delta) <= 0.10
+0.02,2,43,posterior Pr(p > 0.12-delta) <= 0.10
+0.04,0,19,posterior Pr(p > 0.12-delta) <= 0.10
+0.04,1,39,posterior Pr(p > 0.12-delta) <= 0.10
+0.04,2,56,posterior Pr(p > 0.12-delta) <= 0.10
+0.08,0,48,posterior Pr(p > 0.12-delta) <= 0.10
+0.08,1,87,posterior Pr(p > 0.12-delta) <= 0.10
+0.08,2,123,posterior Pr(p > 0.12-delta) <= 0.10
+0.12,0,infeasible_within_10000,posterior Pr(p > 0.12-delta) <= 0.10
+0.12,1,infeasible_within_10000,posterior Pr(p > 0.12-delta) <= 0.10
+0.12,2,infeasible_within_10000,posterior Pr(p > 0.12-delta) <= 0.10

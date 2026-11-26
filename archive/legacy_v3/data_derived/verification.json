@@ -1,0 +1,15 @@
+{
+  "oracle_checks": 5,
+  "max_abs_error": 0.0,
+  "trajectories": 1200,
+  "seed_count": 200,
+  "root_exact_action": "deploy",
+  "root_exact_prior_value": 7.788999999999998,
+  "model_scope": "Reduced 8-period discrete two-point latent defect model; one outstanding report at a time; same actions for all policies; NOT the original 12-period F7.1 simulator",
+  "limitations": [
+    "Model is intentionally small; not a full-scale oracle",
+    "Greedy/fixed are heuristic baselines; not established state-of-art algorithms",
+    "Prior-expected optimality does not guarantee conditional dominance for fixed true defect rates",
+    "Reporting queue restricts to one outstanding batch and forbids production while reports pending"
+  ]
+}

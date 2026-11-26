@@ -1,0 +1,11 @@
+scenario,comparison,n,mean_difference,ci95_low,ci95_high
+nominal,queue_guard minus fixed_rule,200,-0.38375,-1.2451465664028112,0.47764656640281117
+nominal,queue_guard minus reactive_rule,200,0.1925,-0.18479999999999996,0.5698
+late_shift,queue_guard minus fixed_rule,200,-4.8375,-6.001775066685069,-3.6732249333149314
+late_shift,queue_guard minus reactive_rule,200,-0.05125,-0.1517,0.0492
+high_defect,queue_guard minus fixed_rule,200,-1.45,-1.678514187017659,-1.221485812982341
+high_defect,queue_guard minus reactive_rule,200,-0.495,-0.5019122133551661,-0.4880877866448339
+delayed_reports,queue_guard minus fixed_rule,200,-0.5275,-1.244197018994202,0.18919701899420216
+delayed_reports,queue_guard minus reactive_rule,200,5.99375,3.955290818076225,8.032209181923776
+rollback_expensive,queue_guard minus fixed_rule,200,-15.9975,-17.427712255375802,-14.567287744624199
+rollback_expensive,queue_guard minus reactive_rule,200,-0.11125,-0.3293,0.10679999999999999

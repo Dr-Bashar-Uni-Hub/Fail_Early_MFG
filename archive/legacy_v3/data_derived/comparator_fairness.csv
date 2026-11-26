@@ -1,0 +1,7 @@
+policy,common_random_outcomes,same_reporting_delay,same_pilot_and_deploy_cost,same_rollback_action,same_deployment_gate,full_horizon_optimal,valid_superiority_comparator,notes
+matched_fixed,True,True,True,False,False,False,False,not full-horizon matched Bayesian comparator
+matched_reactive,True,True,True,True,False,False,True,"matched_reactive has different stopping rules, so not identical feasible decision class"
+no_queue,True,False,True,True,True,False,False,information leakage; invalid real-world baseline
+no_risk_gate,True,True,True,False,False,False,False,not full-horizon matched Bayesian comparator
+no_rollback,True,True,True,False,True,False,False,not full-horizon matched Bayesian comparator
+queue_guard,True,True,True,True,True,False,False,not full-horizon matched Bayesian comparator

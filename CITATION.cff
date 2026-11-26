@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Decision-time information in manufacturing quality evaluation: reproducibility package"
+authors:
+  - family-names: "ALHAJAHMAD"
+    given-names: "Bashar"
+    affiliation: "Department of Computer Engineering, Siirt University, Türkiye"
+    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # add before release
+version: "6.1.0"
+date-released: "2026-11-25"
+license: MIT
+# doi: "10.5281/zenodo.XXXXXXX"   # add after archiving the GitHub release on Zenodo
