@@ -1,0 +1,17 @@
+scenario,policy,rollback_rate,n_deployed
+high_defect,AC,1.0,8
+high_defect,AE,1.0,8
+high_defect,FX,0.65,20
+high_defect,WS,1.0,1
+moderate_shift,AC,0.8400852878464818,469
+moderate_shift,AE,0.9317697228144989,469
+moderate_shift,FX,0.0,495
+moderate_shift,WS,0.002,500
+nominal,AC,0.03837953091684435,469
+nominal,AE,0.03411513859275053,469
+nominal,FX,0.0,495
+nominal,WS,0.0,500
+severe_shift,AC,1.0,469
+severe_shift,AE,1.0,469
+severe_shift,FX,0.00404040404040404,495
+severe_shift,WS,0.96,500

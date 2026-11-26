@@ -1,0 +1,27 @@
+{
+  "policy": "AC",
+  "scenario": "severe_shift",
+  "H_post": 12,
+  "L_max": {
+    "1.0": {
+      "predicted": null,
+      "simulated": null
+    },
+    "2.0": {
+      "predicted": 0,
+      "simulated": 0
+    },
+    "3.0": {
+      "predicted": 1,
+      "simulated": 1
+    },
+    "4.0": {
+      "predicted": 2,
+      "simulated": 2
+    },
+    "6.0": {
+      "predicted": 4,
+      "simulated": 4
+    }
+  }
+}
